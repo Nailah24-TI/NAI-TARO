@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <!-- FOTO KAMPUS PCR -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_kampus_pcr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- OVERLAY BIRU -->
+
+    <!-- LOGO -->
+
+    <!-- SIGAP -->
+
+    <!-- GARIS KUNING -->
+
+    <View
+        android:id="@+id/blueOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.78"
+        android:background="@color/sigap_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgLogoSigap"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/sigap_logo_description"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_sigap"
+        app:layout_constraintBottom_toTopOf="@id/tvSigap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvSigap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="0.05"
+        android:text="@string/sigap_title"
+        android:textColor="@color/sigap_white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogoSigap" />
+
+    <View
+        android:id="@+id/viewAccent"
+        android:layout_width="55dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/sigap_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSigap" />
+
+    <!-- SUBTITLE -->
+
+    <!-- TAGLINE -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="center"
+        android:text="@string/sigap_subtitle"
+        android:textColor="@color/sigap_white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewAccent" />
+
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="@string/sigap_tagline"
+        android:textColor="@color/sigap_yellow"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+    <!-- LOADING -->
+    <ProgressBar
+        android:id="@+id/progressSplash"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:indeterminateTint="@color/sigap_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTagline" />
+
+    <TextView
+        android:id="@+id/tvLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Memuat aplikasi..."
+        android:textColor="@color/sigap_white"
+        android:textSize="12sp"
+        android:alpha="0.9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressSplash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

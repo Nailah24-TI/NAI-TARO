@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SIGAP</string>
+
+    <string name="sigap_title">SIGAP</string>
+
+    <string name="sigap_subtitle">
+        SISTEM LAYANAN SARANA DAN PRASARANA KAMPUS PCR
+    </string>
+
+    <string name="sigap_tagline">
+        Cepat, Tepat, Terpercaya, Terintegrasi
+    </string>
+
+    <string name="sigap_logo_description">Logo SIGAP</string>
+
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="welcome">Selamat Datang di SIGAP</string>
+    <string name="sarpras">Sarana dan Prasarana</string>
+
+    <string name="login_description">
+    Masuk untuk mengakses layanan SIGAP.
+</string>
+
+    <string name="login_subtitle">
+    Kelola sarana dan prasarana kampus dengan mudah.
+</string>
+
+</resources>

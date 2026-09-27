@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="taro_yellow">#FFC928</color>
+    <color name="taro_red">#D9281C</color>
+    <color name="taro_orange">#F47B20</color>
+
+    <color name="taro_cream">#FFF9ED</color>
+    <color name="taro_dark">#2D2118</color>
+    <color name="taro_gray">#766C64</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="sigap_blue">#0860D8</color>
+    <color name="sigap_blue_dark">#0349A8</color>
+    <color name="sigap_yellow">#FFC928</color>
+    <color name="sigap_white">#FFFFFF</color>
+    <color name="sigap_gray">#667085</color>
+    <color name="sigap_light">#F5F8FC</color>
+
+</resources>
