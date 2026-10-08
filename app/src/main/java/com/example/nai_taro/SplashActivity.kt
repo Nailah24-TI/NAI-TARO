@@ -3,28 +3,43 @@ package com.example.nai_taro
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.nai_taro.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySplashBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_splash)
 
-        binding.root.postDelayed({
+        val sharedPreferences =
+            getSharedPreferences("SIGAP_PREF", MODE_PRIVATE)
 
-            val intent = Intent(
-                this,
-                MainActivity::class.java
-            )
+        val isLogin =
+            sharedPreferences.getBoolean("isLogin", false)
 
-            startActivity(intent)
+        window.decorView.postDelayed({
+
+            if (isLogin) {
+
+                startActivity(
+                    Intent(
+                        this@SplashActivity,
+                        MainActivity::class.java
+                    )
+                )
+
+            } else {
+
+                startActivity(
+                    Intent(
+                        this@SplashActivity,
+                        AuthActivity::class.java
+                    )
+                )
+            }
+
             finish()
 
-        }, 2000)
+        }, 1500)
     }
 }

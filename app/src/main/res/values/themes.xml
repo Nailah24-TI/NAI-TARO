@@ -1,9 +1,25 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.NAITaro" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.NAITaro"
+        parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/sigap_blue</item>
+        <item name="colorPrimaryVariant">@color/sigap_blue_dark</item>
+        <item name="colorSecondary">@color/sigap_blue</item>
+
+        <item name="android:windowBackground">@color/sigap_light</item>
+
+        <item name="android:fontFamily">@font/poppins_regular</item>
+
+        <item name="android:textColorPrimary">@color/sigap_blue_dark</item>
+        <item name="android:textColorSecondary">@color/sigap_gray</item>
+
+        <item name="android:statusBarColor">@color/sigap_blue_dark</item>
+        <item name="android:navigationBarColor">@color/sigap_white</item>
+
+        <item name="android:windowLightNavigationBar">true</item>
+
     </style>
 
-    <style name="Theme.NAITaro" parent="Base.Theme.NAITaro" />
 </resources>
