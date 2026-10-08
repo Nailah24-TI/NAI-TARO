@@ -3,6 +3,12 @@
 
     <string name="app_name">SIGAP</string>
 
+    <style name="CircleImageShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
     <string name="sigap_title">SIGAP</string>
 
     <string name="sigap_subtitle">

@@ -1,3 +1,4 @@
+
 package com.example.nai_taro
 
 import android.content.Intent
@@ -18,10 +19,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // =========================
-        // TOOLBAR
-        // =========================
-
         setSupportActionBar(binding.toolbar)
 
         supportActionBar?.apply {
@@ -29,57 +26,48 @@ class MainActivity : AppCompatActivity() {
             subtitle = "Sarana & Prasarana PCR"
         }
 
-        // =========================
-        // WEBSITE PCR
-        // =========================
-
         binding.btnWebsite.setOnClickListener {
-
-            val intent = Intent(
-                this@MainActivity,
-                WebActivity::class.java
+            startActivity(
+                Intent(this, WebActivity::class.java)
             )
-
-            startActivity(intent)
         }
     }
 
-    // =========================
-    // OPTION MENU
-    // =========================
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-
-        menuInflater.inflate(
-            R.menu.main_menu,
-            menu
-        )
-
+        menuInflater.inflate(R.menu.main_menu, menu)
         return true
     }
 
-    // =========================
-    // MENU CLICK
-    // =========================
-
-    override fun onOptionsItemSelected(
-        item: MenuItem
-    ): Boolean {
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
 
             R.id.action_search -> {
+                AlertDialog.Builder(this)
+                    .setTitle("Search")
+                    .setMessage("Fitur pencarian belum tersedia.")
+                    .setPositiveButton("OK", null)
+                    .show()
                 true
             }
 
             R.id.action_settings -> {
+                AlertDialog.Builder(this)
+                    .setTitle("Settings")
+                    .setMessage("Pengaturan belum tersedia.")
+                    .setPositiveButton("OK", null)
+                    .show()
+                true
+            }
+
+            R.id.action_developer -> {
+                startActivity(
+                    Intent(this, DeveloperActivity::class.java)
+                )
                 true
             }
 
             R.id.action_logout -> {
-
                 showLogoutDialog()
-
                 true
             }
 
@@ -87,12 +75,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // =========================
-    // LOGOUT DIALOG
-    // =========================
-
     private fun showLogoutDialog() {
-
         AlertDialog.Builder(this)
             .setTitle("Konfirmasi Logout")
             .setMessage("Apakah Anda yakin ingin logout?")
@@ -100,22 +83,18 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton("Ya") { _, _ ->
 
                 val sharedPreferences =
-                    getSharedPreferences(
-                        "SIGAP_PREF",
-                        MODE_PRIVATE
-                    )
+                    getSharedPreferences("SIGAP_PREF", MODE_PRIVATE)
 
                 sharedPreferences.edit()
                     .putBoolean("isLogin", false)
                     .apply()
 
                 val intent = Intent(
-                    this@MainActivity,
+                    this,
                     AuthActivity::class.java
                 )
 
                 startActivity(intent)
-
                 finish()
             }
             .show()
