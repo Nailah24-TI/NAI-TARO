@@ -11,35 +11,35 @@ class SplashActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_splash)
 
-        val sharedPreferences =
-            getSharedPreferences("SIGAP_PREF", MODE_PRIVATE)
+        // Mengambil data status login
+        val sharedPreferences = getSharedPreferences(
+            "SIGAP_PREF",
+            MODE_PRIVATE
+        )
 
-        val isLogin =
-            sharedPreferences.getBoolean("isLogin", false)
+        // Membaca status login, default false
+        val isLogin = sharedPreferences.getBoolean(
+            "isLogin",
+            false
+        )
 
+        // Menunggu 1,5 detik sebelum berpindah halaman
         window.decorView.postDelayed({
 
-            if (isLogin) {
-
-                startActivity(
-                    Intent(
-                        this@SplashActivity,
-                        MainActivity::class.java
-                    )
-                )
-
+            // Menentukan halaman tujuan berdasarkan status login
+            val tujuan = if (isLogin) {
+                MainActivity::class.java
             } else {
-
-                startActivity(
-                    Intent(
-                        this@SplashActivity,
-                        AuthActivity::class.java
-                    )
-                )
+                AuthActivity::class.java
             }
 
+            // Membuka halaman tujuan
+            startActivity(Intent(this@SplashActivity, tujuan))
+
+            // Menutup SplashActivity agar tidak kembali ke splash
             finish()
 
         }, 1500)
     }
 }
+
