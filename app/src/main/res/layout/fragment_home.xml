@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Halo, Nailah 👋"
+                android:text="Halo, Nailah"
                 android:textColor="@color/sigap_white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -65,6 +65,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <!-- Layanan: Barang, Ruang, Lab -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,11 +91,14 @@
                         android:orientation="vertical"
                         android:padding="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="📦"
-                            android:textSize="34sp" />
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_icon_circle"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_barang"
+                            android:contentDescription="Barang"
+                            android:scaleType="fitCenter" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -126,11 +130,14 @@
                         android:orientation="vertical"
                         android:padding="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🚪"
-                            android:textSize="34sp" />
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_icon_circle"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_ruang"
+                            android:contentDescription="Ruang"
+                            android:scaleType="fitCenter" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -161,11 +168,14 @@
                         android:orientation="vertical"
                         android:padding="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🧪"
-                            android:textSize="34sp" />
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_icon_circle"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_lab"
+                            android:contentDescription="Laboratorium"
+                            android:scaleType="fitCenter" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -178,6 +188,7 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
+            <!-- Layanan: Aset dan Lainnya -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -203,11 +214,14 @@
                         android:orientation="vertical"
                         android:padding="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🖥️"
-                            android:textSize="32sp" />
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_icon_circle"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_aset"
+                            android:contentDescription="Aset dan inventaris"
+                            android:scaleType="fitCenter" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -239,13 +253,14 @@
                         android:orientation="vertical"
                         android:padding="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="•••"
-                            android:textColor="@color/sigap_blue"
-                            android:textSize="34sp"
-                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_icon_circle"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_lainnya"
+                            android:contentDescription="Lainnya"
+                            android:scaleType="fitCenter" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -258,6 +273,7 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
+            <!-- Pengajuan aktif -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -278,7 +294,7 @@
                     android:id="@+id/tvSeeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lihat Semua ›"
+                    android:text="Lihat Semua"
                     android:textColor="@color/sigap_blue"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -302,12 +318,14 @@
                     android:orientation="horizontal"
                     android:padding="14dp">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
-                        android:gravity="center"
-                        android:text="📦"
-                        android:textSize="25sp" />
+                        android:background="@drawable/bg_icon_circle"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_pengajuan"
+                        android:contentDescription="Pengajuan aktif"
+                        android:scaleType="fitCenter" />
 
                     <LinearLayout
                         android:layout_width="0dp"
