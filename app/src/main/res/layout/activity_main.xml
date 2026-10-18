@@ -7,81 +7,35 @@
     android:orientation="vertical"
     android:background="@color/sigap_light">
 
-    <androidx.appcompat.widget.Toolbar
+    <!-- Toolbar SIGAP -->
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/sigap_blue"
-        android:elevation="4dp"
         app:title="SIGAP"
         app:subtitle="Sarana &amp; Prasarana PCR"
         app:titleTextColor="@color/sigap_white"
         app:subtitleTextColor="@color/sigap_white" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFragment1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:minWidth="0dp"
-            android:text="Beranda"
-            android:textSize="11sp"
-            app:cornerRadius="10dp"
-            app:backgroundTint="@color/sigap_blue" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFragment2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:minWidth="0dp"
-            android:text="Pengajuan"
-            android:textSize="11sp"
-            app:cornerRadius="10dp"
-            app:backgroundTint="@color/sigap_blue" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFragment3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:minWidth="0dp"
-            android:text="Lainnya"
-            android:textSize="11sp"
-            app:cornerRadius="10dp"
-            app:backgroundTint="@color/sigap_blue" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/sigap_white"
-            app:itemIconTint="@color/bottom_nav_color"
-            app:itemTextColor="@color/bottom_nav_color"
-            app:labelVisibilityMode="labeled"
-            app:itemHorizontalTranslationEnabled="false"
-            app:menu="@menu/bottom_nav_menu" />
-
-
-    </LinearLayout>
-
+    <!-- Area untuk menampilkan Fragment -->
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sigap_white"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:elevation="8dp" />
 
 </LinearLayout>

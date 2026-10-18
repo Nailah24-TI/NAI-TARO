@@ -10,7 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.nai_taro.Home.HomeFragment
 import com.example.nai_taro.Message.MessageFragment
-import com.example.nai_taro.More.MoreFragment
+import com.example.nai_taro.Notifikasi.NotifikasiFragment
+import com.example.nai_taro.Profil.ProfilFragment
+import com.example.nai_taro.Riwayat.RiwayatFragment
 import com.example.nai_taro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -31,40 +33,46 @@ class MainActivity : AppCompatActivity() {
             subtitle = "Sarana & Prasarana PCR"
         }
 
-        // Menampilkan HomeFragment saat pertama kali dibuka
+        // Navigasi Bottom Navigation
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+
+            val fragment: Fragment? = when (item.itemId) {
+                R.id.nav_home -> HomeFragment()
+                R.id.nav_pengajuan -> MessageFragment()
+                R.id.nav_riwayat -> RiwayatFragment()
+                R.id.nav_notifikasi -> NotifikasiFragment()
+                R.id.nav_profil -> ProfilFragment()
+                else -> null
+            }
+
+            if (fragment != null) {
+                replaceFragment(fragment)
+                true
+            } else {
+                false
+            }
+        }
+
+        // Tampilkan Beranda saat pertama kali dibuka
         if (savedInstanceState == null) {
-            replaceFragment(HomeFragment())
-        }
-
-        // Tombol untuk berpindah Fragment
-        binding.btnFragment1.setOnClickListener {
-            replaceFragment(HomeFragment())
-        }
-
-        binding.btnFragment2.setOnClickListener {
-            replaceFragment(MessageFragment())
-        }
-
-        binding.btnFragment3.setOnClickListener {
-            replaceFragment(MoreFragment())
+            binding.bottomNavigation.selectedItemId = R.id.nav_home
         }
     }
 
-    // Mengganti Fragment dalam fragment_container
+    // Mengganti fragment di area konten
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, fragment)
-            .addToBackStack(null)
+            .replace(R.id.fragment_container, fragment)
             .commit()
     }
 
-    // Menampilkan menu Toolbar
+    // Menu Toolbar
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return true
     }
 
-    // Aksi setiap menu Toolbar
+    // Aksi Menu Toolbar
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
 
