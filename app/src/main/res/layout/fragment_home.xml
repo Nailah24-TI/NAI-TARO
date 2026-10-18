@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="190dp"
@@ -46,6 +47,7 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
+        <!-- KONTEN DASHBOARD -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,6 +59,7 @@
             android:paddingEnd="20dp"
             android:paddingBottom="28dp">
 
+            <!-- LAYANAN -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,13 +68,14 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- Layanan: Barang, Ruang, Lab -->
+            <!-- BARANG, RUANG, LAB -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
+                <!-- BARANG -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardBarang"
                     android:layout_width="0dp"
@@ -95,10 +99,10 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_icon_circle"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_barang"
                             android:contentDescription="Barang"
-                            android:scaleType="fitCenter" />
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_barang" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -110,6 +114,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- RUANG -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardRuang"
                     android:layout_width="0dp"
@@ -134,10 +139,10 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_icon_circle"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_ruang"
                             android:contentDescription="Ruang"
-                            android:scaleType="fitCenter" />
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_ruang" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -149,6 +154,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- LAB -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardLab"
                     android:layout_width="0dp"
@@ -172,10 +178,10 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_icon_circle"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_lab"
                             android:contentDescription="Laboratorium"
-                            android:scaleType="fitCenter" />
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_lab" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -188,13 +194,14 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- Layanan: Aset dan Lainnya -->
+            <!-- ASET DAN LAINNYA -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal">
 
+                <!-- ASET -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardAset"
                     android:layout_width="0dp"
@@ -218,10 +225,10 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_icon_circle"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_aset"
                             android:contentDescription="Aset dan inventaris"
-                            android:scaleType="fitCenter" />
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_aset" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -234,6 +241,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- LAINNYA -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardLainnya"
                     android:layout_width="0dp"
@@ -257,10 +265,10 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/bg_icon_circle"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_lainnya"
                             android:contentDescription="Lainnya"
-                            android:scaleType="fitCenter" />
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_lainnya" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -273,7 +281,7 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- Pengajuan aktif -->
+            <!-- PENGAJUAN AKTIF -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -322,10 +330,10 @@
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:background="@drawable/bg_icon_circle"
-                        android:padding="9dp"
-                        android:src="@drawable/ic_pengajuan"
                         android:contentDescription="Pengajuan aktif"
-                        android:scaleType="fitCenter" />
+                        android:padding="9dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_pengajuan" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -366,6 +374,78 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- KALENDER PEMINJAMAN -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardKalender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/sigap_white"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#E3EAF5"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kalender Peminjaman"
+                        android:textColor="@color/sigap_blue_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Lihat jadwal pengajuan berdasarkan tanggal"
+                        android:textColor="@color/sigap_gray"
+                        android:textSize="12sp" />
+
+                    <CalendarView
+                        android:id="@+id/calendarPeminjaman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:firstDayOfWeek="2"
+                        android:showWeekNumber="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#E3EAF5" />
+
+                    <TextView
+                        android:id="@+id/tvTanggalKalender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Jadwal pada tanggal terpilih"
+                        android:textColor="@color/sigap_blue_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvJadwalKalender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Belum ada pengajuan pada tanggal ini."
+                        android:textColor="@color/sigap_gray"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- WEBSITE PCR -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnWebsite"
                 android:layout_width="match_parent"
