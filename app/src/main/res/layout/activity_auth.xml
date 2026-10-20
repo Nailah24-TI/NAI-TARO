@@ -161,6 +161,18 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:maxLines="1" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Belum punya akun? Registrasi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/sigap_blue"
+                    app:backgroundTint="@color/sigap_white"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/sigap_blue"
+                    app:strokeWidth="1dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -14,7 +14,7 @@
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="116dp"
             android:background="@color/sigap_blue"
             android:orientation="vertical"
             android:paddingStart="24dp"
@@ -32,19 +32,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="37dp"
                 android:layout_marginTop="8dp"
                 android:text="Apa yang ingin Anda ajukan hari ini?"
                 android:textColor="@color/sigap_white"
                 android:textSize="14sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="Sistem Layanan Sarana dan Prasarana PCR"
-                android:textColor="@color/sigap_white"
-                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- KONTEN DASHBOARD -->
