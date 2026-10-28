@@ -21,9 +21,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".WebActivity"
             android:exported="false" />
         <activity
@@ -44,6 +41,14 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".VerificationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DetailPeminjamanActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RatingUlasanActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
