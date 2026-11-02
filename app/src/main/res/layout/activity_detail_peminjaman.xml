@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!-- JUDUL -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,10 +25,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="ID Pengajuan: SIGAP-..."
+            android:text="ID Pengajuan"
             android:textColor="#64748B"
             android:textSize="13sp" />
 
+        <!-- INFORMASI PEMINJAMAN -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,11 +80,12 @@
                 android:layout_marginTop="12dp"
                 android:text="Status: Menunggu"
                 android:textColor="#B7791F"
-                android:textStyle="bold"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
+        <!-- QR CODE -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +109,7 @@
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_marginTop="16dp"
-                android:contentDescription="QR Code pengajuan peminjaman"
+                android:contentDescription="QR Code peminjaman"
                 android:scaleType="fitCenter" />
 
             <TextView
@@ -114,13 +117,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="QR Code digunakan untuk simulasi check-in dan check-out."
+                android:text="QR Code untuk identitas transaksi peminjaman."
                 android:textColor="#64748B"
                 android:textSize="12sp" />
 
         </LinearLayout>
 
-
+        <!-- SIMULASI PERSETUJUAN -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSimulasiSetujui"
             android:layout_width="match_parent"
@@ -129,24 +132,90 @@
             android:text="Simulasikan Persetujuan"
             android:textAllCaps="false" />
 
-
+        <!-- CHECK-IN -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCheckIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Simulasikan Check-in"
+            android:layout_marginTop="12dp"
+            android:text="Konfirmasi Check-in"
             android:textAllCaps="false" />
 
+        <!-- FOTO BUKTI PENGEMBALIAN -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Foto Bukti Pengembalian"
+            android:textColor="#163A70"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Upload foto kondisi barang sebelum melakukan check-out."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
+
+        <!-- TOMBOL FOTO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAmbilFoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ambil Foto"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPilihGaleri"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Pilih dari Galeri"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <!-- PREVIEW FOTO -->
+        <ImageView
+            android:id="@+id/ivBuktiPengembalian"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:background="#E8EDF5"
+            android:contentDescription="Preview foto bukti pengembalian"
+            android:scaleType="centerCrop" />
+
+        <!-- STATUS FOTO -->
+        <TextView
+            android:id="@+id/tvStatusBukti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Foto bukti belum dipilih"
+            android:textColor="#D32F2F"
+            android:textSize="13sp" />
+
+        <!-- CHECK-OUT -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCheckOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Simulasikan Check-out"
+            android:layout_marginTop="12dp"
+            android:enabled="false"
+            android:text="Konfirmasi Check-out"
             android:textAllCaps="false" />
 
-
+        <!-- RATING DAN ULASAN -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBeriRating"
             android:layout_width="match_parent"
@@ -155,7 +224,6 @@
             android:text="Beri Rating &amp; Ulasan"
             android:textAllCaps="false"
             android:visibility="gone" />
-
 
     </LinearLayout>
 
