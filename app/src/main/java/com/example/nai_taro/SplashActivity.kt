@@ -1,45 +1,62 @@
+
 package com.example.nai_taro
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.example.nai_taro.Tutorial.OnboardingActivity
+
 
 class SplashActivity : AppCompatActivity() {
 
+    private val preferencesName = "SIGAP_PREF"
+    private val onboardingKey = "hasSeenOnboarding"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_splash)
 
-        // Mengambil data status login
-        val sharedPreferences = getSharedPreferences(
-            "SIGAP_PREF",
-            MODE_PRIVATE
-        )
+        Handler(Looper.getMainLooper()).postDelayed({
 
-        // Membaca status login, default false
-        val isLogin = sharedPreferences.getBoolean(
-            "isLogin",
-            false
-        )
+            val prefs = getSharedPreferences(
+                preferencesName,
+                MODE_PRIVATE
+            )
 
-        // Menunggu 1,5 detik sebelum berpindah halaman
-        window.decorView.postDelayed({
+            val hasSeenOnboarding = prefs.getBoolean(
+                onboardingKey,
+                false
+            )
 
-            // Menentukan halaman tujuan berdasarkan status login
-            val tujuan = if (isLogin) {
-                MainActivity::class.java
-            } else {
-                AuthActivity::class.java
+            val isLogin = prefs.getBoolean(
+                "isLogin",
+                false
+            )
+
+            when {
+                !hasSeenOnboarding -> {
+                    startActivity(
+                        Intent(this, OnboardingActivity::class.java)
+                    )
+                }
+
+                isLogin -> {
+                    startActivity(
+                        Intent(this, MainActivity::class.java)
+                    )
+                }
+
+                else -> {
+                    startActivity(
+                        Intent(this, AuthActivity::class.java)
+                    )
+                }
             }
 
-            // Membuka halaman tujuan
-            startActivity(Intent(this@SplashActivity, tujuan))
-
-            // Menutup SplashActivity agar tidak kembali ke splash
             finish()
 
         }, 1500)
     }
 }
-

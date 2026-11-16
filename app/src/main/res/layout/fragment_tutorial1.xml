@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    tools:context=".tutorial.Tutorial1Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="35dp"
+        android:paddingBottom="25dp">
+
+        <!-- Logo SIGAP -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGAP"
+            android:textColor="#164B91"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:fontFamily="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SISTEM LAYANAN SARANA DAN PRASARANA"
+            android:textColor="#718096"
+            android:textSize="10sp"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="4dp" />
+
+        <!-- Ilustrasi -->
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="35dp"
+            android:background="#E2ECFC">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏫"
+                    android:textSize="100sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAMPUS FACILITY"
+                    android:textColor="#164B91"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- Judul -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang di SIGAP!"
+            android:textColor="#163F75"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="35dp" />
+
+        <!-- Deskripsi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kenali SIGAP, aplikasi layanan sarana dan prasarana kampus PCR yang memudahkan kamu dalam mengakses layanan fasilitas kampus."
+            android:textColor="#64748B"
+            android:textSize="15sp"
+            android:lineSpacingExtra="6dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp" />
+
+        <View
+            android:layout_width="55dp"
+            android:layout_height="4dp"
+            android:background="#2166B1"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cepat, Tepat, Terpercaya, Terintegrasi"
+            android:textColor="#164B91"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
